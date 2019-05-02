@@ -36,3 +36,6 @@ y = relu(x)
 plt.plot(x, y)
 plt.ylim(-0.1, 5.1)
 plt.show()
+
+def identity_function(x):
+    return x
