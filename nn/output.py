@@ -1,3 +1,4 @@
+import numpy as np
 def softmax_without_overflow(a):
     exp_a = np.exp(a)
     exp_a_sum = np.sum(exp_a)
