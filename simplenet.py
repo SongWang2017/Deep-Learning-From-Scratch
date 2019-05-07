@@ -22,7 +22,7 @@ class simpleNet:
 
         return loss
 
-net = simpleNet()
+
 '''
 net = simpleNet()
 print(net.W)
@@ -35,13 +35,15 @@ print(p)
 t = np.array([0, 0, 1])
 print(net.loss(x, t))
 '''
-
+net = simpleNet()
 def f(W):
     return net.loss(x, t)
+
 x = np.array([0.6, 0.9])
 t = np.array([0, 0, 1])
 dW = numerical_gradient(f, net.W)
 
 print(dW)
+
 
 
