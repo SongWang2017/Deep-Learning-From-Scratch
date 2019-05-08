@@ -47,7 +47,7 @@ for i in range(iters_num):
         test_acc_list.append(test_acc)
 
         print("train acc, test acc | " + str(train_acc) + ", " + str(test_acc))
-        
+
 
 plt.figure(figsize=(16, 6))
 plt.plot(train_loss_list)
