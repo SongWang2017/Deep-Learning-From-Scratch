@@ -4,6 +4,7 @@ from learning.grad import numerical_gradient
 from nn.activation import sigmoid
 from nn.output import softmax
 from learning.loss import cross_entropy_error
+import numpy as np
 
 class TwoLayerNet:
 
@@ -54,5 +55,6 @@ class TwoLayerNet:
     
 
 # weight initialization
+
 
 
