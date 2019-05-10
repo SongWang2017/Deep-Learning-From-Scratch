@@ -13,9 +13,10 @@ test_acc_list = []
 #hyperparameters
 iters_num = 10000
 train_size = x_train.shape[0]
-iter_per_epoch = np.max(train_size / batch_size, 1)
-batch_size = 100
-learning_rate = 0.1
+batch_size = 32
+iter_per_epoch = max(train_size / batch_size, 1)
+
+learning_rate = 0.01
 
 network = TwoLayerNet(input_size=784, hiddent_size=50, output_size=10)
 #print(network.params)
@@ -28,8 +29,9 @@ for i in range(iters_num):
     t_batch = t_train[batch_mask]
 
     #calculate gradient
-    grad = network.numerical_gradient(x_batch, t_batch)
-    #bp gradient #grad = network.gradient(x_batch, t_batch)
+    #grad = network.numerical_gradient(x_batch, t_batch)
+    #bp gradient #
+    grad = network.gradient(x_batch, t_batch)
 
     #update parameters
     for key in ['W1', 'b1', 'W2', 'b2']:
