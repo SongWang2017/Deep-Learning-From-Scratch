@@ -11,12 +11,12 @@ test_acc_list = []
 
 
 #hyperparameters
-iters_num = 10000
+iters_num = 100000
 train_size = x_train.shape[0]
 batch_size = 32
 iter_per_epoch = max(train_size / batch_size, 1)
 
-learning_rate = 0.01
+learning_rate = 0.00001
 
 network = TwoLayerNet(input_size=784, hiddent_size=50, output_size=10)
 #print(network.params)
