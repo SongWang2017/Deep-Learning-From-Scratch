@@ -1,4 +1,5 @@
 import sys, os
+import numpy as np
 sys.path.append(os.pardir)
 from learning.util import im2col
 
